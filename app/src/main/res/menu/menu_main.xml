@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.adam.popularmoviesstage1.MainActivity">
+    <item
+        android:id="@string/pref_sort_popular_desc_key"
+
+        android:title="Popular"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@string/pref_sort_vote_avg_desc_key"
+
+        android:title="Vote"
+        app:showAsAction="ifRoom" />
+</menu>

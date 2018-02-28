@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Popular Movies Stage 1</string>
+    <string name="key_movie_db">7f18b451d1932d0910901435d51c2039</string>
+    <string name="the_movie_db_base_url">https://api.themoviedb.org/3/discover/movie?</string>
+    <string name="movie_activity_details_title">Movie Details</string>
+
+    <!-- UI text -->
+    <!-- Headlines -->
+    <string name="movie_release_date_header">Release Date</string>
+    <string name="movie_vote_average_header">Vote Average</string>
+    <!-- UI empty text -->
+    <string name="movie_release_date_not_found_message">Release date not found</string>
+    <string name="movie_summary_not_found">Summary not found</string>
+
+
+    <!-- parcelable keys -->
+    <string name="parcel_movie">PARCEL_MOVIE</string>
+
+    <!-- Settings items -->
+    <string name="pref_sort_method_key">SORT_METHOD</string>
+    <string name="pref_sort_vote_avg_desc_key">SORT_VOTE_AVERAGE_DESC</string>
+    <string name="pref_sort_popular_desc_key">SORT_POPULARITY_DESC</string>
+
+    <!-- Themoviedb url keys -->
+    <string name="the_movie_db_sort_pop_desc">popularity.desc</string>
+    <string name="the_movie_db_sort_vote_avg_desc">vote_average.desc</string>
+    <string name="description_movie_poster">Contains poster of movie</string>
+
+    <!-- Error user information -->
+    <string name="error_no_internet_connection">Kindly connect the Internet</string>
+</resources>
