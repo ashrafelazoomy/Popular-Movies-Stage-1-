@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.movies_gv) GridView movies_gv;
 Menu menuMain;
+    private static final String theMovieDBAPIKey = BuildConfig.key_movie_db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,7 +103,6 @@ Menu menuMain;
     private void getMoviesFromTheMovieDB(String sortMethod) {
         if (isNetworkAvailable()) {
             // Movies API Key
-            String theMovieDBAPIKey = getString(R.string.key_movie_db);
             //Base URL
             String theMovieDBBaseURL =getString(R.string.the_movie_db_base_url);
             // Listener for when AsyncTask is ready to update UI

@@ -3,6 +3,7 @@ package com.example.adam.popularmoviesstage1.utils;
 import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.widget.Switch;
 
 import com.example.adam.popularmoviesstage1.model.Movie;
 
@@ -23,8 +24,8 @@ import java.net.URL;
  */
 
 public class FetchMovieAsyncTask extends AsyncTask<String, Void, Movie[]> {
-    private final String theMovieDBBaseURL;
-    private final String theMovieDBAPIKey;
+    private   String theMovieDBBaseURL;
+    private   String theMovieDBAPIKey;
     private final OnTaskCompleted mListener;
 
      
@@ -136,10 +137,16 @@ public class FetchMovieAsyncTask extends AsyncTask<String, Void, Movie[]> {
      * Build and returns an URL.
      */
     private URL getApiUrl(String[] parameters) throws MalformedURLException {
-        final String SORT_BY_PARAM = "sort_by";
         final String API_KEY_PARAM = "api_key";
+        switch(parameters[0]) {
+            case "popularity.desc":
+                theMovieDBBaseURL = theMovieDBBaseURL + "popular?";
+                break;
+            case "vote_average.desc":
+                theMovieDBBaseURL = theMovieDBBaseURL + "top_rated?";
+                break;
+        }
         Uri builtUri = Uri.parse( theMovieDBBaseURL).buildUpon()
-                .appendQueryParameter(SORT_BY_PARAM, parameters[0])
                 .appendQueryParameter(API_KEY_PARAM, theMovieDBAPIKey)
                 .build();
 
